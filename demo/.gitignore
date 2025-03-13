@@ -1,33 +1,51 @@
-HELP.md
-target/
-!.mvn/wrapper/maven-wrapper.jar
-!**/src/main/**/target/
-!**/src/test/**/target/
+# Ignore application.properties to prevent exposing credentials
+src/main/resources/application.properties
 
-### STS ###
+# Compiled files
+target/
+build/
+*.class
+
+# Maven Wrapper files
+.mvn/wrapper/maven-wrapper.jar
+
+# IntelliJ IDEA
+.idea/
+*.iml
+*.iws
+*.ipr
+
+# STS (Spring Tool Suite)
 .apt_generated
 .classpath
 .factorypath
 .project
-.settings
-.springBeans
-.sts4-cache
+.settings/
+.springBeans/
+.sts4-cache/
 
-### IntelliJ IDEA ###
-.idea
-*.iws
-*.iml
-*.ipr
-
-### NetBeans ###
-/nbproject/private/
-/nbbuild/
-/dist/
-/nbdist/
-/.nb-gradle/
-build/
-!**/src/main/**/build/
-!**/src/test/**/build/
-
-### VS Code ###
+# VS Code
 .vscode/
+
+# Logs
+logs/
+*.log
+debug.log
+nohup.out
+
+# Temporary files
+tmp/
+.DS_Store
+Thumbs.db
+
+# Ignore sensitive files
+*.env
+.env.local
+.env.development
+.env.production
+.env.test
+.env*.local
+
+# Git-specific
+*.swp
+*.swo
